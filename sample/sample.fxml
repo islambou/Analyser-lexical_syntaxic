@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefWidth="200.0" spacing="30.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label text="Code" HBox.hgrow="NEVER" />
+                        <Label fx:id="etat" />
+                        <Label fx:id="error" />
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="code" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Tokens" />
+                  <TextArea fx:id="tokens" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="KeyWords" />
+                        <TextArea fx:id="McTxt" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Symboles" />
+                        <TextArea fx:id="STxt" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Constants" />
+                        <TextArea fx:id="ITxt" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_LEFT" fillHeight="false" spacing="10.0" VBox.vgrow="NEVER">
+         <children>
+            <HBox fillHeight="false" spacing="10.0">
+               <children>
+                  <Label text="Index :" />
+                  <TextField fx:id="in" />
+               </children>
+            </HBox>
+            <HBox fillHeight="false" spacing="10.0">
+               <children>
+                  <Label text="Token :" />
+                  <TextField fx:id="tok" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefWidth="200.0" HBox.hgrow="NEVER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#couper_act" prefHeight="30.0" prefWidth="200.0" text="Couper" HBox.hgrow="NEVER" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#start_act" prefHeight="30.0" prefWidth="500.0" text="Strat" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
